@@ -1,0 +1,18 @@
+.course-array{
+    border: 3px solid turquoise;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+}
+.course-array h4{
+    color: #d4af37;
+    font-size: 30px;
+}
+.course-array p{
+    color: #d4af37;
+    font-size: 18px;
+}
+.course-array p li{
+    margin-top: 10px;
+    list-style-type: none;
+}

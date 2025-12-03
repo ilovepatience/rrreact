@@ -1,0 +1,8 @@
+.family-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #53007e;
+    border-radius: 15px;
+    padding: 40px;
+}
