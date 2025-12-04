@@ -1,0 +1,20 @@
+.post-container{
+    background-color: #1A1A2E;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+.post-container h3{
+    color: #adadad;
+
+}
+.post-container h5{
+    color: #adadad;
+}
+.post-container p{
+    color: #adadad;
+}

@@ -1,0 +1,13 @@
+.CommentComponent{
+    border: 3px solid #000000;
+    border-radius: 16px;
+    background-color: #ffe8e8;
+    margin: 1rem;
+    padding: 1rem;
+}
+.CommentComponent:hover{
+    background-color: goldenrod;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
