@@ -1,5 +1,5 @@
 
-export interface IUserModel {
+export interface IUserModelPlaceholder {
     id: number;
     name: string,
     username: string,

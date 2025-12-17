@@ -1,13 +1,13 @@
 import {useEffect, useState} from "react";
 import {UserComponentJsonplaceholder} from "./UserComponentJsonplaceholder.tsx";
+import type {IUserModelPlaceholder} from "../../modules/IUserModelPlaceholder.ts";
+import {usersFetchJsonPlaceholder} from "../../services/services.tsx";
 
 export const UsersComponentJsonplaceholder = () => {
-    const [user, setUser] = useState([])
+    const [user, setUser] = useState<IUserModelPlaceholder[]>([])
 
     useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/users")
-        .then(res => res.json())
-        .then(json => setUser(json))
+        usersFetchJsonPlaceholder().then(value => setUser(value))
     }, [])
     
     return (

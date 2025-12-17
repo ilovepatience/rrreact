@@ -1,9 +1,9 @@
 import type {FC} from "react";
-import type {IUserModel} from "../../modules/IUserModel.ts";
+import type {IUserModelPlaceholder} from "../../modules/IUserModelPlaceholder.ts";
 
 
 interface PropType {
-    user: IUserModel
+    user: IUserModelPlaceholder
 }
 
 export const UserComponentJsonplaceholder: FC<PropType> = ({user}) => {
@@ -16,19 +16,22 @@ export const UserComponentJsonplaceholder: FC<PropType> = ({user}) => {
                 <p>Name - {user.name}</p>
                 <p>Username - {user.username}</p>
                 <p>Email - {user.email}</p>
-                <ul>Address:
+                <p>Address:</p>
+                <ul>
                     <li>Street - {user.address.street}</li>
                     <li>Suite - {user.address.suite}</li>
                     <li>City - {user.address.city}</li>
                     <li>Zipcode - {user.address.zipcode}</li>
                 </ul>
-                    <ul>Geo:
+                <p>Geo:</p>
+                    <ul>
                         <li>Lat - {user.address.geo.lat}</li>
                         <li>Lng - {user.address.geo.lng}</li>
                     </ul>
                 <p>Phone - {user.phone}</p>
                 <p>Website - {user.website}</p>
-                <ul>Company:
+                <p>Company:</p>
+                <ul>
                     <li>Name - {user.company.name}</li>
                     <li>CatchPhrase - {user.company.catchPhrase}</li>
                     <li>Bs - {user.company.bs}</li>
