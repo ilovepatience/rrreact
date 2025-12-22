@@ -12,6 +12,7 @@ import {CommentsComponentJsonplaceholder} from "../components/CommentsComponents
 import {CommentsComponentDummyJson} from "../components/CommentsComponents/CommentsComponentDummyJson.tsx";
 import {ProsuctsComponentJsonplaceholder} from "../components/ProductsComponents/ProsuctsComponentJsonplaceholder.tsx";
 import {ProductsComponentDummyJson} from "../components/ProductsComponents/ProductsComponentDummyJson.tsx";
+import {CartsPage} from "../pages/CartsPage.tsx";
 
 
 export const routes = createBrowserRouter([
@@ -21,7 +22,12 @@ export const routes = createBrowserRouter([
                 path: "users", element: <UsersPage/>,
                 children: [
                     {path: "jsonplaceholder", element: <UsersComponentJsonplaceholder/>},
-                    {path: "dummyjson", element: <UsersComponentDummyJson/>}
+                    {
+                        path: "dummyjson", element: <UsersComponentDummyJson/>, children: [
+                            {path: ":id/carts", element: <CartsPage/>}
+                        ]
+                    },
+
                 ],
             },
             {

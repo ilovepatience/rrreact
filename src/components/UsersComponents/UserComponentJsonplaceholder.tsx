@@ -39,7 +39,6 @@ export const UserComponentJsonplaceholder: FC<PropType> = ({user}) => {
                 <hr/>
             </div>
 
-
         </>
     );
 };

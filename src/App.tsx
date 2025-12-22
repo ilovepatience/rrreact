@@ -7,7 +7,7 @@ function App() {
   return (
     <>
         <Menu/>
-      App component
+
         <hr/>
         <Outlet/>
     </>

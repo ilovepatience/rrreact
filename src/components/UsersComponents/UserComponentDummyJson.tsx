@@ -1,5 +1,6 @@
-import type {FC} from "react";
+import {type FC} from "react";
 import type IUserModelDummyJson from "../../modules/IUserModelDummyJson.ts";
+import {useNavigate} from "react-router-dom";
 
 
 interface PropType {
@@ -7,6 +8,14 @@ interface PropType {
 }
 
 export const UserComponentDummyJson: FC<PropType> = ({user}) => {
+
+    const navigate = useNavigate()
+    const onButtonClick = () => {
+        console.log("clicked");
+        navigate(user.id + '/carts')
+
+
+    }
 
     return (
         <>
@@ -28,26 +37,26 @@ export const UserComponentDummyJson: FC<PropType> = ({user}) => {
                 <p>Weight - {user.weight}</p>
                 <p>Eye Color - {user.eyeColor}</p>
                 <p>Hair:</p>
-                    <ul>
-                        <li>Color - {user.hair.color}</li>
-                        <li>Type - {user.hair.type}</li>
-                    </ul>
+                <ul>
+                    <li>Color - {user.hair.color}</li>
+                    <li>Type - {user.hair.type}</li>
+                </ul>
                 <p>Ip - {user.ip}</p>
                 <p>Address:</p>
-                    <ul>
-                        <li>Address - {user.address.address}</li>
-                        <li>City - {user.address.city}</li>
-                        <li>State - {user.address.state}</li>
-                        <li>StateCode - {user.address.stateCode}</li>
-                        <li>PostalCode - {user.address.postalCode}</li>
-                        <li>Coordinates
-                            <ul>
-                                <li>Lat - {user.address.coordinates.lat}</li>
-                                <li>Lng - {user.address.coordinates.lng}</li>
-                            </ul>
-                        </li>
-                        <li>Country - {user.address.country}</li>
-                    </ul>
+                <ul>
+                    <li>Address - {user.address.address}</li>
+                    <li>City - {user.address.city}</li>
+                    <li>State - {user.address.state}</li>
+                    <li>StateCode - {user.address.stateCode}</li>
+                    <li>PostalCode - {user.address.postalCode}</li>
+                    <li>Coordinates
+                        <ul>
+                            <li>Lat - {user.address.coordinates.lat}</li>
+                            <li>Lng - {user.address.coordinates.lng}</li>
+                        </ul>
+                    </li>
+                    <li>Country - {user.address.country}</li>
+                </ul>
                 <p>Mac Address - {user.macAddress}</p>
                 <p>University - {user.university}</p>
                 <p>Bank:</p>
@@ -89,6 +98,7 @@ export const UserComponentDummyJson: FC<PropType> = ({user}) => {
                     <li>Wallet - {user.crypto.wallet}</li>
                     <li>Network - {user.crypto.network}</li>
                 </ul>
+                <button onClick={onButtonClick}>View carts of current user</button>
                 <hr/>
             </div>
         </>
